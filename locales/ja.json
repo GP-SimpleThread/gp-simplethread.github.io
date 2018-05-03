@@ -3,5 +3,10 @@
 	"menu.thread": "Thread",
 	"menu.about": "About",
 	"menu.languages": "言語",
-	"menu.signOut": "ログアウト"
+	"menu.signOut": "ログアウト",
+
+	"top.details": [
+		"Simple Threadへようこそ！",
+		"当サービスでは 'Be Simple, Be Free' をモットーに、自由に話せる場所を提供します✌︎('ω'✌︎ )"
+	]
 }

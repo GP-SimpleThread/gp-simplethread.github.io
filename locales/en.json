@@ -3,5 +3,10 @@
 	"menu.thread": "Thread",
 	"menu.about": "About",
 	"menu.languages": "Languages",
-	"menu.signOut": "Sign Out"
+	"menu.signOut": "Sign Out",
+
+	"top.details": [
+		"Welcome to Simple Thread!",
+		"We provide a free space to talk with anyone for you, based on 'Be Simple, Be Free' :)"
+	]
 }

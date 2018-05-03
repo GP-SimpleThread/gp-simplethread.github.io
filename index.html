@@ -21,14 +21,15 @@
 		<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Material+Icons" />
 		<Link Rel = "StyleSheet" Href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
 		<Script Src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></Script>
+		<Script Src = "https://genbuhase.github.io/Product/Snippets/CookieStore-20180503.js"></Script>
+		<Script Src = "https://genbuhase.github.io/Product/Snippets/RootLinker-20180503.js"></Script>
+		<Script RootSrc = "/lib/Locale.js"></Script>
 
-		<Script Src = "lib/CookieStore.js"></Script>
-		<Script Src = "lib/Locale.js"></Script>
 		<Script Src = "main.js" Defer></Script>
 		<Link Rel = "StyleSheet" Href = "main.css" />
 	</Head>
 
-	<Body>
+	<Body Class = "grey">
 		<Header Class = "navbar-fixed">
 			<Nav>
 				<Div Class = "nav-wrapper teal">
@@ -36,9 +37,7 @@
 
 					<A Href = "#" Class = "sidenav-trigger show-on-large" Data-Target = "sidebar"><I Class = "material-icons">menu</I></A>
 					<UL Class = "right hide-on-med-and-down">
-						<Li>
-							<A Locale-Message = "menu.top">Top</A>
-						</Li>
+						<Li><A RootHref = "/" Locale-Message = "menu.top">Top</A></Li>
 
 						<Li>
 							<A Class = "dropdown-target" Data-Target = "header-languages">
@@ -52,13 +51,9 @@
 							</UL>
 						</Li>
 
-						<Li ID = "header-signOut" Class = "disabled">
-							<A><Span Locale-Message = "menu.signOut">Sign Out</Span></A>
-						</Li>
+						<Li ID = "header-signOut" Class = "disabled"><A Locale-Message = "menu.signOut">Sign Out</A></Li>
 
-						<Li ID = "header-profile">
-							<A><Img Class = "circle" /></A>
-						</Li>
+						<Li ID = "header-profilePhoto"><A RootHref = "/profile/"><Img Class = "profilePhoto circle" /></A></Li>
 					</UL>
 				</Div>
 			</Nav>
@@ -66,27 +61,24 @@
 
 		<UL ID = "sidebar" Class = "sidenav">
 			<Li>
-				<A Href = "/">
-					<I Class = "material-icons left">home</I>
-					<Span Locale-Message = "menu.top">Top</Span>
-				</A>
+				<Div Class = "user-view">
+					<Div ID = "sidebar-coverPhoto" Class = "background">
+						<Img Class = "coverPhoto" />
+					</Div>
+
+					<A RootHref = "/profile/"><Img Class = "profilePhoto circle" /></A>
+					<Span Class = "name">TEST</Span>
+					<Span Class = "email">yajuu114514@shimokitazawa.net</Span>
+				</Div>
 			</Li>
 
-			<Li>
-				<A Href = "/thread/">
-					<I Class = "material-icons left">comment</I>
-					<Span Locale-Message = "menu.thread">Thread</Span>
-				</A>
-			</Li>
+			<Li><A RootHref = "/"><I Class = "material-icons left">home</I><Span Locale-Message = "menu.top">Top</Span></A></Li>
+			<Li><A RootHref = "/thread/"><I Class = "material-icons left">comment</I><Span Locale-Message = "menu.thread">Thread</Span></A></Li>
+			<Li><A RootHref = "/about"><I Class = "material-icons left">info</I><Span Locale-Message = "menu.about">About</Span></A></Li>
 
-			<Li>
-				<A Href = "/about">
-					<I Class = "material-icons left">info</I>
-					<Span Locale-Message = "menu.about">About</Span>
-				</A>
-			</Li>
+			<Li Class = "hide-on-large-only"><Div Class = "divider"></Div></Li>
 
-			<Li>
+			<Li Class = "hide-on-large-only">
 				<A Class = "dropdown-target" Href = "#" Data-Target = "sidebar-languages">
 					<I Class = "material-icons left">language</I>
 					<Span Locale-Message = "menu.languages">Languages</Span>
@@ -99,12 +91,17 @@
 				</UL>
 			</Li>
 			
-			<Li ID = "sidebar-signOut" Class = "disabled">
-				<A>
-					<I Class = "material-icons left">person</I>
-					<Span Locale-Message = "menu.signOut">Sign Out</Span>
-				</A>
-			</Li>
+			<Li Class = "hide-on-large-only" ID = "sidebar-signOut" Class = "disabled"><A><I Class = "material-icons left">person</I><Span Locale-Message = "menu.signOut">Sign Out</Span></A></Li>
 		</UL>
+
+		<Main Class = "container">
+			<Article ID = "welcomePanel" Class = "row white z-depth-2">
+				<Img ID = "welcomePanel-logo" Class = "col s12" Src = "image/logo.png" />
+				<P Class = "col" Locale-Message = "top.details">
+					Welcome to Simple Thread!<Br />
+					We provide a free space to talk with anyone for you, based on 'Be Simple, Be Free' :)
+				</P>
+			</Article>
+		</Main>
 	</Body>
 </HTML>
