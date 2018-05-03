@@ -16,9 +16,95 @@
 			gtag('js', new Date());
 			gtag('config', 'UA-88656260-2');
 		</Script>
+
+		<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Roboto" />
+		<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<Link Rel = "StyleSheet" Href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
+		<Script Src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></Script>
+
+		<Script Src = "lib/CookieStore.js"></Script>
+		<Script Src = "lib/Locale.js"></Script>
+		<Script Src = "main.js" Defer></Script>
+		<Link Rel = "StyleSheet" Href = "main.css" />
 	</Head>
 
 	<Body>
+		<Header Class = "navbar-fixed">
+			<Nav>
+				<Div Class = "nav-wrapper teal">
+					<Span Class = "brand-logo center truncate">Simple Thread</Span>
 
+					<A Href = "#" Class = "sidenav-trigger show-on-large" Data-Target = "sidebar"><I Class = "material-icons">menu</I></A>
+					<UL Class = "right hide-on-med-and-down">
+						<Li>
+							<A Locale-Message = "menu.top">Top</A>
+						</Li>
+
+						<Li>
+							<A Class = "dropdown-target" Data-Target = "header-languages">
+								<Span Locale-Message = "menu.languages">Languages</Span>
+								<I Class = "material-icons right">arrow_drop_down</I>
+							</A>
+
+							<UL ID = "header-languages" Class = "dropdown-content">
+								<Li><A Href = "?lang=ja">日本語</A></Li>
+								<Li><A Href = "?lang=en">English</A></Li>
+							</UL>
+						</Li>
+
+						<Li ID = "header-signOut" Class = "disabled">
+							<A><Span Locale-Message = "menu.signOut">Sign Out</Span></A>
+						</Li>
+
+						<Li ID = "header-profile">
+							<A><Img Class = "circle" /></A>
+						</Li>
+					</UL>
+				</Div>
+			</Nav>
+		</Header>
+
+		<UL ID = "sidebar" Class = "sidenav">
+			<Li>
+				<A Href = "/">
+					<I Class = "material-icons left">home</I>
+					<Span Locale-Message = "menu.top">Top</Span>
+				</A>
+			</Li>
+
+			<Li>
+				<A Href = "/thread/">
+					<I Class = "material-icons left">comment</I>
+					<Span Locale-Message = "menu.thread">Thread</Span>
+				</A>
+			</Li>
+
+			<Li>
+				<A Href = "/about">
+					<I Class = "material-icons left">info</I>
+					<Span Locale-Message = "menu.about">About</Span>
+				</A>
+			</Li>
+
+			<Li>
+				<A Class = "dropdown-target" Href = "#" Data-Target = "sidebar-languages">
+					<I Class = "material-icons left">language</I>
+					<Span Locale-Message = "menu.languages">Languages</Span>
+					<I Class = "material-icons right">arrow_drop_down</I>
+				</A>
+
+				<UL ID = "sidebar-languages" Class = "dropdown-content">
+					<Li><A Href = "?lang=ja">日本語</A></Li>
+					<Li><A Href = "?lang=en">English</A></Li>
+				</UL>
+			</Li>
+			
+			<Li ID = "sidebar-signOut" Class = "disabled">
+				<A>
+					<I Class = "material-icons left">person</I>
+					<Span Locale-Message = "menu.signOut">Sign Out</Span>
+				</A>
+			</Li>
+		</UL>
 	</Body>
 </HTML>
