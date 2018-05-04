@@ -6,6 +6,7 @@ Main {
 }
 
 #header-profilePhoto Img {
+	Width: 2.5em;
 	Height: 2.5em;
 	Vertical-Align: Middle;
 }
