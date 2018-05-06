@@ -5,7 +5,10 @@
 		<Meta Charset = "UTF-8" />
 		<Meta Name = "Viewport" Content = "Width=Device-Width, Initial-Scale=1, User-Scalable=No" />
 		<Title>Simple Thread - A Threading Service</Title>
-		<Link Rel = "Shortcut Icon" Href = "favicon.ico" />
+		<!--<Link Rel = "Canonical" Href = "http://localhost:8001/" />-->
+		<Link Rel = "Manifest" Href = "./manifest.json" />
+		<Link Rel = "Icon" Href = "./favicon.ico" />
+		<Link Rel = "Apple-Touch-Icon-Precomposed" Href = "./favicon.png" />
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<Script Src = "https://www.googletagmanager.com/gtag/js?id=UA-88656260-2" Async></Script>
@@ -17,19 +20,24 @@
 			gtag('config', 'UA-88656260-2');
 		</Script>
 
+		<Script Src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></Script>
+		<Script Src = "https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></Script>
+		<Script Src = "https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.js"></Script>
+		<Script Src = "./lib/SimpleFirebase.js"></Script>
+		<Script Src = "./lib/CookieStore.js"></Script>
+		<Script Src = "./lib/Lib-Linker.js"></Script>
+		<Script Src = "./lib/Locale.js"></Script>
+		<Script Src = "./lib/DBInitializer.js"></Script>
+		<Script Src = "main.js" Defer></Script>
+		
 		<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Roboto" />
 		<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Material+Icons" />
 		<Link Rel = "StyleSheet" Href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
-		<Script Src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></Script>
-		<Script Src = "https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></Script>
-		<Script Src = "./lib/CookieStore.js"></Script>
-		<Script Src = "./lib/Locale.js"></Script>
-
-		<Script Src = "main.js" Defer></Script>
+		<Link Rel = "StyleSheet" Href = "https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.css" />
 		<Link Rel = "StyleSheet" Href = "main.css" />
 	</Head>
 
-	<Body Class = "grey">
+	<Body>
 		<Header Class = "navbar-fixed">
 			<Nav>
 				<Div Class = "nav-wrapper teal">
@@ -37,7 +45,7 @@
 
 					<A Href = "#" Class = "sidenav-trigger show-on-large" Data-Target = "sidebar"><I Class = "material-icons">menu</I></A>
 					<UL Class = "right hide-on-med-and-down">
-						<Li><A Href = "./" Locale-Message = "menu.top">Top</A></Li>
+						<Li><A RootHref = "./" Locale-Message = "menu.top">Top</A></Li>
 
 						<Li>
 							<A Class = "dropdown-target" Data-Target = "header-languages">
@@ -103,5 +111,16 @@
 				</P>
 			</Article>
 		</Main>
+
+		<Div ID = "TEST" Class = "modal">
+			<Div Class = "modal-content">
+				<H5>Please sign in with Google</H4>
+				<P>Content</P>
+			</Div>
+
+			<Div Class = "modal-footer">
+				
+			</Div>
+		</Div>
 	</Body>
 </HTML>

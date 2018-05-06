@@ -1,9 +1,15 @@
+Body {
+	Background: URL("image/background.jpg");
+}
+
 Main {
 	Padding-Top: 1em;
 
 	Font-Family: Roboto;
 	Line-Height: 1.75;
 }
+
+
 
 #header-profilePhoto Img {
 	Width: 2.5em;

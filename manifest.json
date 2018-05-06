@@ -1,0 +1,17 @@
+{
+	"name": "Simple Thread",
+	"short_name": "Simple Thread",
+	"start_url": "/",
+	
+	"icons": [
+		{
+			"src": "favicon.png",
+			"type": "image/png",
+			"sizes": "256x256"
+		}
+	],
+
+	"display": "standalone",
+	"theme_color": "#009688",
+	"background_color": "#009688"
+}
