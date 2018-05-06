@@ -1,0 +1,21 @@
+*.disabled {
+	Display: None;
+}
+
+Body {
+	Background: URL("image/background.jpg");
+	Font-Family: Roboto;
+}
+
+Main {
+	Padding-Top: 1em;
+	Line-Height: 1.75;
+}
+
+
+
+#header-profilePhoto Img {
+	Width: 2.5em;
+	Height: 2.5em;
+	Vertical-Align: Middle;
+}

@@ -1,9 +1,14 @@
 {
-	"menu.top": "Top",
-	"menu.thread": "Thread",
-	"menu.about": "About",
-	"menu.languages": "言語",
-	"menu.signOut": "ログアウト",
+	"common.menu.top": "Top",
+	"common.menu.thread": "Thread",
+	"common.menu.about": "About",
+	"common.menu.languages": "言語",
+	"common.menu.signOut": "ログアウト",
+
+	"common.signIn.details": [
+		"当サービスを利用されるにあたって、Googleアカウントへのログインが必須になります。",
+		"ご利用の前にこちらからログインをお願い致します。"
+	],
 
 	"top.details": [
 		"Simple Threadへようこそ！",

@@ -1,9 +1,14 @@
 {
-	"menu.top": "Top",
-	"menu.thread": "Thread",
-	"menu.about": "About",
-	"menu.languages": "Languages",
-	"menu.signOut": "Sign Out",
+	"common.menu.top": "Top",
+	"common.menu.thread": "Thread",
+	"common.menu.about": "About",
+	"common.menu.languages": "Languages",
+	"common.menu.signOut": "Sign Out",
+
+	"common.signIn.details": [
+		"This service requires users to sign in with any accounts of Google.",
+		"Before using this service, sign in with your account, please."
+	],
 
 	"top.details": [
 		"Welcome to Simple Thread!",
