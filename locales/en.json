@@ -13,5 +13,10 @@
 	"top.details": [
 		"Welcome to Simple Thread!",
 		"We provide a free space to talk with anyone for you, based on 'Be Simple, Be Free' :)"
-	]
+	],
+
+	"about.info.name": "Name",
+	"about.info.value": "Value",
+	"about.info.users": "Users",
+	"about.info.threads": "Threads"
 }

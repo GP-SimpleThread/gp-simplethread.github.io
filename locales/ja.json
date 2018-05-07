@@ -13,5 +13,10 @@
 	"top.details": [
 		"Simple Threadへようこそ！",
 		"当サービスでは 'Be Simple, Be Free' をモットーに、自由に話せる場所を提供します✌︎('ω'✌︎ )"
-	]
+	],
+
+	"about.info.name": "項目",
+	"about.info.value": "値",
+	"about.info.users": "登録ユーザー数",
+	"about.info.threads": "総スレッド数"
 }

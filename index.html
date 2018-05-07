@@ -27,7 +27,7 @@
 		<Script Src = "./lib/CookieStore.js"></Script>
 		<Script Src = "./lib/Linker.js"></Script>
 		<Script Src = "./lib/Locale.js"></Script>
-		<Script Src = "./lib/DBInitializer.js"></Script>
+		<Script Src = "./lib/DBInitializer.js" Defer></Script>
 		<Script Src = "main.js" Defer></Script>
 		
 		<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Roboto" />
@@ -68,12 +68,8 @@
 		</Header>
 
 		<UL ID = "sidebar" Class = "sidenav">
-			<Li ID = "sidebar-profile" Class = "disabled">
+			<Li ID = "sidebar-profilePanel" Class = "disabled">
 				<Div Class = "user-view">
-					<Div ID = "sidebar-profile-coverPhoto" Class = "background">
-						<Img Class = "coverPhoto" />
-					</Div>
-
 					<A RootHref = "/profile/"><Img Class = "profilePhoto circle" /></A>
 					<Span ID = "sidebar-profile-username" Class = "name">Username</Span>
 					<Span ID = "sidebar-profile-email" Class = "email">Email</Span>
@@ -111,7 +107,7 @@
 			</Article>
 
 			<Article ID = "welcomePanel" Class = "row white z-depth-2">
-				<Img ID = "welcomePanel-logo" Class = "col s12" Src = "image/logo.png" />
+				<Img ID = "welcomePanel-logo" Class = "col s12" RootSrc = "/image/logo.png" />
 				<P Class = "col" Locale-Message = "top.details">
 					Welcome to Simple Thread!<Br />
 					We provide a free space to talk with anyone for you, based on 'Be Simple, Be Free' :)
