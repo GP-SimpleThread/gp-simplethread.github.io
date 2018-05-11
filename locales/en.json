@@ -1,4 +1,7 @@
 {
+	"common.save": "Save the changes",
+	"common.discard": "Discard the changes",
+
 	"common.menu.top": "Top",
 	"common.menu.thread": "Thread",
 	"common.menu.about": "About",
@@ -18,5 +21,10 @@
 	"about.info.name": "Name",
 	"about.info.value": "Value",
 	"about.info.users": "Users",
-	"about.info.threads": "Threads"
+	"about.info.threads": "Threads",
+
+	"profile.title": "Editing your profile",
+	"profile.username": "Your name",
+	"profile.bio": "Your bio",
+	"profile.links": "Links"
 }

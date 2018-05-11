@@ -13,7 +13,7 @@
 > 
 > thread/ (...A list of Threads)
 > 
-> setting/ (...User settings)
+> settings/ (...User settings)
 >> profile/ (...Profile settings)
 >> 
 > manifest.json (...Manifest of this app)

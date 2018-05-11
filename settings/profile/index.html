@@ -58,7 +58,7 @@
 						</Li>
 
 						<Li ID = "header-signOut" Class = "disabled"><A Locale-Message = "common.menu.signOut">Sign Out</A></Li>
-						<Li ID = "header-profilePhoto" Class = "disabled"><A RootHref = "/setting/profile/"><Img Class = "profilePhoto circle" /></A></Li>
+						<Li ID = "header-profilePhoto"><A RootHref = "/settings/profile/"><Img Class = "profilePhoto circle" /></A></Li>
 					</UL>
 				</Div>
 			</Nav>
@@ -67,7 +67,7 @@
 		<UL ID = "sidebar" Class = "sidenav">
 			<Li ID = "sidebar-profilePanel" Class = "disabled">
 				<Div Class = "user-view">
-					<A RootHref = "/setting/profile/"><Img Class = "profilePhoto circle" /></A>
+					<A RootHref = "/settings/profile/"><Img Class = "profilePhoto circle" /></A>
 					<Span ID = "sidebar-profile-username" Class = "name">Username</Span>
 					<Span ID = "sidebar-profile-email" Class = "email">Email</Span>
 				</Div>
@@ -104,7 +104,26 @@
 			</Article>
 
 			<Article ID = "profilePanel" Class = "row white z-depth-2">
-				
+				<H4 Class = "brown-text col s12" Locale-Message = "profile.title">Basic</H4>
+
+				<Div Class = "input-field col s12">
+					<Input ID = "profilePanel-userName" Type = "Text" Data-Length = "30" />
+					<Label For = "profilePanel-userName" Locale-Message = "profile.username">Your name</Label>
+				</Div>
+
+				<Div Class = "input-field col s12">
+					<Textarea ID = "profilePanel-bio" Class = "materialize-textarea" Data-Length = "500"></Textarea>
+					<Label For = "profilePanel-bio" Locale-Message = "profile.bio">Your bio</Label>
+				</Div>
+
+
+				<H6 Class = "col" Locale-Message = "profile.links">Links</H6>
+				<Div ID = "profilePanel-links" Class = "chips col s12"></Div>
+
+				<Div Class = "input-field col s12">
+					<Button Class = "btn waves-effect waves-light" Locale-Message = "common.save">Save the changes</Button>
+					<Button Class = "btn red waves-effect waves-light" Locale-Message = "common.discard">Discard the changes</Button>
+				</Div>
 			</Article>
 		</Main>
 	</Body>

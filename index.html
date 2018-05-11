@@ -28,7 +28,6 @@
 		<Script Src = "./lib/Linker.js"></Script>
 		<Script Src = "./lib/Locale.js"></Script>
 		<Script Src = "./lib/DBInitializer.js" Defer></Script>
-		<Script Src = "main.js" Defer></Script>
 		
 		<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Roboto" />
 		<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -61,7 +60,7 @@
 						</Li>
 
 						<Li ID = "header-signOut" Class = "disabled"><A Locale-Message = "common.menu.signOut">Sign Out</A></Li>
-						<Li ID = "header-profilePhoto" Class = "disabled"><A RootHref = "/setting/profile/"><Img Class = "profilePhoto circle" /></A></Li>
+						<Li ID = "header-profilePhoto"><A RootHref = "/settings/profile/"><Img Class = "profilePhoto circle" /></A></Li>
 					</UL>
 				</Div>
 			</Nav>
@@ -70,7 +69,7 @@
 		<UL ID = "sidebar" Class = "sidenav">
 			<Li ID = "sidebar-profilePanel" Class = "disabled">
 				<Div Class = "user-view">
-					<A RootHref = "/setting/profile/"><Img Class = "profilePhoto circle" /></A>
+					<A RootHref = "/settings/profile/"><Img Class = "profilePhoto circle" /></A>
 					<Span ID = "sidebar-profile-username" Class = "name">Username</Span>
 					<Span ID = "sidebar-profile-email" Class = "email">Email</Span>
 				</Div>
