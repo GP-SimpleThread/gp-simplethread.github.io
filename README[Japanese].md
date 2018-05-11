@@ -23,7 +23,8 @@ Simple ThreadはSNSサービスです。
 ## 製作者 | Authors
 * [Genbu Project(in Github)](https://github.com/GenbuProject)
 * [Genbu Project(in Google+)](https://plus.google.com/+GenbuProject2015)
-  * [Genbu Hase(主開発者)](https://github.com/GenbuHase)
+  * [Genbu Hase(主要開発者)](https://github.com/GenbuHase)
+  * [HIBIKI CUBE(アイコンデザイナー)](https://plus.google.com/+HIBIKICUBE)
 
 ## ライセンス | LICENSE
 [AGPL Version 3.0](/LICENSE)

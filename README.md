@@ -24,6 +24,7 @@ It runs without any servers, so any other developers could feel free to deploy.
 * [Genbu Project(in Github)](https://github.com/GenbuProject)
 * [Genbu Project(in Google+)](https://plus.google.com/+GenbuProject2015)
   * [Genbu Hase(Main developer)](https://github.com/GenbuHase)
+  * [HIBIKI CUBE(Icon designer)](https://plus.google.com/+HIBIKICUBE)
 
 ## LICENSE
 [AGPL Version 3.0](/LICENSE)
