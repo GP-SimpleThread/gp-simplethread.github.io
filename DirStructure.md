@@ -1,27 +1,27 @@
 ## Directory Structure
-/ (Root)
-> lib/
+
+`/` (Root)
+> `lib/`
 >> A lot of libraries...
 >> 
-> image/
+> `image/`
 >> A lot of images...
 >> 
-> locales/
+> `locales/`
 >> A lot of localization datas...
 >> 
-> about/ (...App information)
+> `about/` (App information)
 > 
-> thread/ (...A list of Threads)
+> `thread/` (A list of Threads)
 > 
-> settings/ (...User settings)
->> profile/ (...Profile settings)
->> 
-> manifest.json (...Manifest of this app)
+> `profile/` (Profile settings)
 > 
-> dbconfig.json (...Config of the database)
+> `manifest.json` (Manifest)
 > 
-> index.html (...Top page)
+> `dbconfig.json` (Config of the database)
 > 
-> favicon.ico | favicon.png (...Icon of this app)
+> `index.html` (Top page)
 > 
-> README.md | README[:langCode].md (...Overview of this app)
+> `favicon.ico` | `favicon.png` (Icon)
+> 
+> `README.md` | `README[:langCode].md` (Reference)

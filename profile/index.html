@@ -20,18 +20,18 @@
 		<Script Src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></Script>
 		<Script Src = "https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></Script>
 		<Script Src = "https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.js"></Script>
-		<Script Src = "../../lib/SimpleFirebase.js"></Script>
-		<Script Src = "../../lib/CookieStore.js"></Script>
-		<Script Src = "../../lib/Linker.js"></Script>
-		<Script Src = "../../lib/Locale.js"></Script>
-		<Script Src = "../../lib/DBInitializer.js" Defer></Script>
+		<Script Src = "../lib/SimpleFirebase.js"></Script>
+		<Script Src = "../lib/CookieStore.js"></Script>
+		<Script Src = "../lib/Linker.js"></Script>
+		<Script Src = "../lib/Locale.js"></Script>
+		<Script Src = "../lib/DBInitializer.js" Defer></Script>
 		<Script Src = "profile.js" Defer></Script>
 		
 		<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Roboto" />
 		<Link Rel = "StyleSheet" Href = "https://fonts.googleapis.com/icon?family=Material+Icons" />
 		<Link Rel = "StyleSheet" Href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css" />
 		<Link Rel = "StyleSheet" Href = "https://cdn.firebase.com/libs/firebaseui/2.7.0/firebaseui.css" />
-		<Link Rel = "StyleSheet" Href = "../../common.css" />
+		<Link Rel = "StyleSheet" Href = "../common.css" />
 		<Link Rel = "StyleSheet" Href = "profile.css" />
 	</Head>
 
@@ -58,7 +58,7 @@
 						</Li>
 
 						<Li ID = "header-signOut" Class = "disabled"><A Locale-Message = "common.menu.signOut">Sign Out</A></Li>
-						<Li ID = "header-profilePhoto"><A RootHref = "/settings/profile/"><Img Class = "profilePhoto circle" /></A></Li>
+						<Li ID = "header-profilePhoto"><A RootHref = "/profile/"><Img Class = "profilePhoto circle" /></A></Li>
 					</UL>
 				</Div>
 			</Nav>
@@ -67,7 +67,7 @@
 		<UL ID = "sidebar" Class = "sidenav">
 			<Li ID = "sidebar-profilePanel" Class = "disabled">
 				<Div Class = "user-view">
-					<A RootHref = "/settings/profile/"><Img Class = "profilePhoto circle" /></A>
+					<A RootHref = "/profile/"><Img Class = "profilePhoto circle" /></A>
 					<Span ID = "sidebar-profile-username" Class = "name">Username</Span>
 					<Span ID = "sidebar-profile-email" Class = "email">Email</Span>
 				</Div>
