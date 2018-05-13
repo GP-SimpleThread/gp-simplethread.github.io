@@ -20,7 +20,7 @@
 
 			/** @type {Array<Link>} */
 			links: [
-				{ label: String, url: URL.toString() },
+				{ title: String, url: URL.toString() },
 				...
 			]
 		},

@@ -1,0 +1,14 @@
+#profilePanel-links > .collection-header > Div {
+	Display: Flex;
+	Flex-Direction: Row;
+	Align-Items: Center;
+	Justify-Content: Space-Between;
+}
+
+#profilePanel-links > .collection-header > Div > .input-field:First-Child {
+	Width: 30%;
+}
+
+#profilePanel-links > .collection-header > Div > .input-field:Last-Child {
+	Width: 67.5%;
+}

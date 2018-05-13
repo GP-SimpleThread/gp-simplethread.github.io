@@ -1,39 +1,39 @@
-const userName = document.getElementById("profilePanel-userName");
+const username = document.getElementById("profilePanel-username");
 const bio = document.getElementById("profilePanel-bio");
-const links = document.getElementById("profilePanel-links");
+const link = document.getElementById("profilePanel-links");
+const linkAddBtn = link.querySelector(".collection-header .secondary-content");
+const linkTitle = link.querySelector("#profilePanel-links-title");
+const linkUrl = link.querySelector("#profilePanel-links-url");
+const linkChips = link.querySelector(".collection-item.chips");
 const saveBtn = document.getElementById("profilePanel-save");
-const discardBtn = document.getElementById("profilePanel-discard");
 
 window.addEventListener("DOMContentLoaded", () => {
-	M.Chips.init(links, {
-		onChipAdd (root, link) {
-			const chipsObj = root[0].M_Chips;
-			const currentChip = chipsObj.chipsData[chipsObj.chipsData.length - 1];
-
-			if (currentChip.image) return;
-
-			chipsObj.deleteChip(chipsObj.chipsData.length - 1);
-			chipsObj.addChip({
-				tag: currentChip.tag,
-				image: `${new URL(currentChip.tag).origin}/favicon.ico`
-			});
-		}
-	});
-
 	DBInitializer.waitUserFilled().then(app => {
-		saveBtn.addEventListener("click", () => {
-			const linkDatas = links.M_Chips.chipsData;
-			linkDatas.forEach((link, index) => linkDatas[index] = { url: link.tag });
+		linkAddBtn.addEventListener("click", event => {
+			event.preventDefault();
 
-			app.Database.set(`users/${app.Auth.currentUser.uid}`, {
-				userName: userName.value,
-				detail: bio.value,
-				links: linkDatas
+			if (!linkUrl.checkValidity()) throw new URIError("Provided URL is invalid.");
+
+			linkChips.M_Chips.addChip({
+				tag: linkTitle.value,
+				image: `${new URL(linkUrl.value).origin}/favicon.ico`
 			});
+
+			app.Database.transaction(`users/${app.Auth.currentUser.uid}/links`, val => {
+				if (!val) val = [];
+				
+				val.push({ title: linkTitle.value, url: linkUrl.value });
+				return val;
+			});
+	
+			linkTitle.value = linkUrl.value = "";
 		});
 
-		discardBtn.addEventListener("click", () => {
-			location.href = Linker.rootDir;
+		saveBtn.addEventListener("click", () => {
+			app.Database.update(`users/${app.Auth.currentUser.uid}`, {
+				name: username.value,
+				bio: bio.value
+			});
 		});
 	});
 });
@@ -43,14 +43,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	DBInitializer.waitUserFilled().then(app => {
 		app.Database.get(`users/${app.Auth.currentUser.uid}`).then(info => {
-			userName.value = info.userName;
-			bio.value = info.detail;
+			username.value = info.name;
+			bio.value = info.bio;
 
-			info.links.forEach(link => {
-				links.M_Chips.addChip({
-					tag: link.url,
-					image: `${new URL(link.url).origin}/favicon.ico`
-				});
+			let chips = [];
+			if (info.links) info.links.forEach(link => chips.push({ tag: link.title, image: `${new URL(link.url).origin}/favicon.ico` }));
+
+			M.Chips.init(linkChips, {
+				data: chips,
+
+				onChipDelete (parent, chip) {
+					console.log(parent);
+					console.log(chip);
+				}
 			});
 
 			M.updateTextFields();

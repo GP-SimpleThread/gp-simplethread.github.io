@@ -26,5 +26,7 @@
 	"profile.title": "Editing your profile",
 	"profile.username": "Your name",
 	"profile.bio": "Your bio",
-	"profile.links": "Links"
+	"profile.links": "Links",
+	"profile.links.title": "Title",
+	"profile.links.url": "URL"
 }

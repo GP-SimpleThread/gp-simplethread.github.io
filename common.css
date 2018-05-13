@@ -12,7 +12,16 @@ Main {
 	Line-Height: 1.75;
 }
 
+Article {
+	Padding: 2.5%;
+}
 
+
+
+.input-field > .prefix.profilePhoto {
+	Width: 2rem;
+	Margin-Right: 1rem;
+}
 
 #header-profilePhoto Img {
 	Width: 2.5em;

@@ -26,5 +26,7 @@
 	"profile.title": "プロフィールを編集",
 	"profile.username": "ユーザー名",
 	"profile.bio": "自己紹介",
-	"profile.links": "リンク"
+	"profile.links": "リンク",
+	"profile.links.title": "リンク名",
+	"profile.links.url": "リンク先URL"
 }
