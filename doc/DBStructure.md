@@ -3,13 +3,21 @@
 ```JavaScript
 {
 	users: {
-		!SYSTEM: {},
+		!SYSTEM: {
+			name: "",
+			bio: "",
+			photo: "",
+			
+			forSystem: true
+		},
 		
 		/** @type {User} */
 		!SYSTEM_INFO: {
 			name: "",
 			bio: "",
-			photo: ""
+			photo: "",
+
+			forSystem: true
 		},
 
 		/** @type {User} */

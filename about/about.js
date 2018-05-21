@@ -3,7 +3,7 @@ const threads = document.getElementById("infoPanel-threads");
 
 window.addEventListener("DOMContentLoaded", () => {
 	DBInitializer.waitAppFilled().then(app => {
-		app.Firestore.get("users").then(snapshot => users.textContent = snapshot.size - 2);
-		app.Firestore.get("threads").then(snapshot => Array.prototype.filter.call(snapshot.docs, item => item.data().bio !== "").length);
+		app.Firestore.get("users").then(snapshot => users.textContent = SimpleFirebase.SimpleFirestore.filter(snapshot, user => !user.data().forSystem).length);
+		app.Firestore.get("threads").then(snapshot => SimpleFirebase.SimpleFirestore.filter(snapshot, thread => thread.data().bio !== "").length);
 	});
 });
