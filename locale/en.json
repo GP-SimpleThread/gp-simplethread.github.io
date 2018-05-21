@@ -13,6 +13,11 @@
 		"Before using this service, sign in with your account, please."
 	],
 
+	"common.newUserNotify": [
+		"Your account has been created.",
+		"Enjoy your life and feel free in Simple Thread! :)"
+	],
+
 	"top.details": [
 		"Welcome to Simple Thread!",
 		"We provide a free space to talk with anyone for you, based on 'Be Simple, Be Free' :)"
@@ -24,7 +29,7 @@
 	"about.info.threads": "Threads",
 
 	"profile.title": "Editing your profile",
-	"profile.username": "Your name",
+	"profile.name": "Your name",
 	"profile.bio": "Your bio",
 	"profile.links": "Links",
 	"profile.links.title": "Title",

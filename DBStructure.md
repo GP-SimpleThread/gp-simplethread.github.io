@@ -3,7 +3,7 @@
 ```JavaScript
 {
 	users: {
-		!SYSTEM: "",
+		!SYSTEM: {},
 		
 		/** @type {User} */
 		!SYSTEM_INFO: {

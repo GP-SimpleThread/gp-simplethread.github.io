@@ -13,6 +13,11 @@
 		"ご利用の前にこちらからログインをお願い致します。"
 	],
 
+	"common.newUserNotify": [
+		"アカウントが新規作成されました。",
+		"Simple Threadへようこそ！！ゆっくりしていってね！"
+	],
+
 	"top.details": [
 		"Simple Threadへようこそ！",
 		"当サービスでは 'Be Simple, Be Free' をモットーに、自由に話せる場所を提供します✌︎('ω'✌︎ )"
@@ -24,7 +29,7 @@
 	"about.info.threads": "総スレッド数",
 
 	"profile.title": "プロフィールを編集",
-	"profile.username": "ユーザー名",
+	"profile.name": "ユーザー名",
 	"profile.bio": "自己紹介",
 	"profile.links": "リンク",
 	"profile.links.title": "リンク名",
